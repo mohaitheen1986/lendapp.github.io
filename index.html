@@ -31,7 +31,6 @@
         email: email
     };
     
-    alert("test");
 
     firebase.database().ref('subscription-entries').push().set(emailObject)
         .then(function(snapshot) {
