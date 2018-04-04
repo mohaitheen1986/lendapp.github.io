@@ -13,23 +13,8 @@
   Login with Google
 </button>
 
-<script src="main.js">
-</script>
-  
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDkChTiD5VfT7CTWgmynH6GSezug9TnScw",
-    authDomain: "lendapp-ff462.firebaseapp.com",
-    databaseURL: "https://lendapp-ff462.firebaseio.com",
-    projectId: "lendapp-ff462",
-    storageBucket: "",
-    messagingSenderId: "878427165024"
-  };
-  firebase.initializeApp(config);
-  
-  
+   
   function saveToFirebase(email) {
     var emailObject = {
         email: email
@@ -45,6 +30,22 @@
             error(); // some error method
         });
   }
+</script>
+  
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDkChTiD5VfT7CTWgmynH6GSezug9TnScw",
+    authDomain: "lendapp-ff462.firebaseapp.com",
+    databaseURL: "https://lendapp-ff462.firebaseio.com",
+    projectId: "lendapp-ff462",
+    storageBucket: "",
+    messagingSenderId: "878427165024"
+  };
+  firebase.initializeApp(config);
+  
+ 
   
   
 </script>
