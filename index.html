@@ -9,28 +9,11 @@
   Login with Facebook
 </button>
 
-<button class="loginBtn loginBtn--google" onclick="saveToFirebase("test@gmail.com")">
+<button class="loginBtn loginBtn--google" onclick="saveToFirebase('test@gmail.com')">
   Login with Google
 </button>
 
-<script>
-   
-  function saveToFirebase(email) {
-    var emailObject = {
-        email: email
-    };
-    
-    alert("test");
 
-    firebase.database().ref('subscription-entries').push().set(emailObject)
-        .then(function(snapshot) {
-            success(); // some success method
-        }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
-        });
-  }
-</script>
   
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
@@ -45,6 +28,21 @@
   };
   firebase.initializeApp(config);
   
+    function saveToFirebase(email) {
+    var emailObject = {
+        email: email
+    };
+    
+    alert("test");
+
+    firebase.database().ref('subscription-entries').push().set(emailObject)
+        .then(function(snapshot) {
+            success(); // some success method
+        }, function(error) {
+            console.log('error' + error);
+            error(); // some error method
+        });
+  }
  
   
   
